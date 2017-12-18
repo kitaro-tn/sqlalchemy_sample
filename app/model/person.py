@@ -21,4 +21,4 @@ class Person(Model):
     shop = relationship("Shop", back_populates="person")
 
     def __repr__(self):
-        return "<Person(id = %d, name = '%s')>" % (self.id, self.name)
+        return "<Person(id = %d, name = '%s', nickname = '%s')>" % (self.id, self.name, self.nickname)
