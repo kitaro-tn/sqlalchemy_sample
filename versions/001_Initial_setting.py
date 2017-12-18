@@ -15,6 +15,7 @@ meta = MetaData()
 shop = Table(
     'shop', meta,
     Column('id', INTEGER(unsigned=True), primary_key=True),
+    Column('name', String(256)),
     Column('address', String(256)),
     Column('created_at', DateTime, nullable=False, server_default=current_timestamp()),
     Column('updated_at', DateTime, nullable=False, server_default=text('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')),
@@ -23,6 +24,7 @@ shop = Table(
 office = Table(
     'office', meta,
     Column('id', INTEGER(unsigned=True), primary_key=True),
+    Column('name', String(256)),
     Column('address', String(256)),
     Column('created_at', DateTime, nullable=False, server_default=current_timestamp()),
     Column('updated_at', DateTime, nullable=False, server_default=text('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')),

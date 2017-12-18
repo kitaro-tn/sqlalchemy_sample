@@ -9,5 +9,5 @@ class Session():
 
     def __init__(self):
         engine = create_engine('mysql+pymysql://root@localhost/gochiusa?charset=utf8', echo=True)
-        self.session = sessionmaker(bind=engine)
-        return self.session
+        Session = sessionmaker(bind=engine)
+        self.session = Session()
